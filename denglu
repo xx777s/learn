@@ -1,0 +1,22 @@
+int main()
+{
+	char ch1[10] = "0";
+	char ch0[10] = "123454321";
+	for (int i = 1; i <= 3; i++)
+	{
+		printf("请输入密码:");
+		scanf("%s", ch1);
+		if (strcmp(ch1, ch0) == 0)
+		{
+			printf("密码正确，登录");
+			break;
+		}
+		else
+		{
+			printf("密码错误，重试(第%d次)", i);
+			Sleep(2000);
+			system("cls");
+		}
+	}
+	return 0;
+}
